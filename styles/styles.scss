@@ -1,0 +1,15 @@
+// GLOBALS
+@import './globals/colors.scss';
+@import './globals/dom.scss';
+@import './globals/fonts.scss';
+@import './globals/presets.scss';
+
+// LAYOUTS
+@import './layouts/default.scss';
+
+// COMPONENTS
+@import './components/presentation.scss';
+@import './components/navbar.scss';
+
+// PAGES
+@import './pages/home.scss';

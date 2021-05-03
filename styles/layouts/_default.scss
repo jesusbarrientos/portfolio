@@ -1,0 +1,15 @@
+.pf-layout-default {
+	min-height: 100%;
+
+	main {
+		min-height: 100%;
+
+		.pf-navbar {
+			position: sticky;
+			top: 0;
+		}
+
+		.content {
+		}
+	}
+}
