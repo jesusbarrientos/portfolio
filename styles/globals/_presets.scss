@@ -2,7 +2,6 @@
  * FONT
  */
 
-// Font classes
 .ellipsis {
 	overflow: hidden;
 	white-space: nowrap;
@@ -10,9 +9,11 @@
 	display: block;
 }
 
+
 /* 
  * SIZES
  */
+
 $sizes: (
 	xs: 4px,
 	s: 8px,
@@ -33,11 +34,14 @@ $positions: t, l, b, r;
 	}
 }
 
-// Margin classes
 .no-margin {
 	margin: 0;
 }
 
+// mt-xs, ml-xs, mb-xs, mr-xs
+// mt-s, ml-s, mb-s, mr-s
+// mt-m, ml-m, mb-m, mr-m
+// mt-l, ml-l, mb-l, mr-l
 .m {
 	@each $size, $sizeValue in $sizes {
 		@each $pos in $positions {
@@ -46,11 +50,14 @@ $positions: t, l, b, r;
 	}
 }
 
-// Padding classes
 .no-padding {
 	padding: 0;
 }
 
+// pt-xs, pl-xs, pb-xs, pr-xs
+// pt-s, pl-s, pb-s, pr-s
+// pt-m, pl-m, pb-m, pr-m
+// pt-l, pl-l, pb-l, pr-l
 .p {
 	@each $size, $sizeValue in $sizes {
 		@each $pos in $positions {
@@ -59,11 +66,11 @@ $positions: t, l, b, r;
 	}
 }
 
+
 /* 
  * COLORS
  */
 
-// Color classes
 @mixin fill($suffix, $color) {
 	&-#{$suffix} {
 		background-color: $color;
@@ -74,6 +81,7 @@ $positions: t, l, b, r;
 	color: $color-4;
 }
 
+// fill-1, fill-2, fill-3, fill-4, fill-5
 .fill {
 	@include fill(1, $color-1);
 	@include fill(2, $color-2);

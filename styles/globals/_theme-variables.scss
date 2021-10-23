@@ -1,0 +1,41 @@
+@function map-fetch($map, $keys) {
+	$key: nth($keys, 1);
+	$length: length($keys);
+	$value: map-get($map, $key);
+	@if ($length > 1) {
+		$rest: ();
+		@for $i from 2 through $length {
+			$rest: append($rest, nth($keys, $i));
+		}
+		@return map-fetch($value, $rest);
+	} @else {
+		@return $value;
+	}
+}
+
+
+// Global Colors
+
+$color-font: var(--color-font);
+$color-anchor: var(--color-anchor);
+$color-background: var(--color-background);
+
+// Components Colors
+
+$Navbar: (
+    ThemeIcon: (
+        InsidePath: (
+            fill: transparent,
+            hoverFill: transparent,
+        ),
+        OutsidePath: (
+            fill: var(--color-navbar-icon-fill),
+            hoverFill: var(--color-navbar-icon-hoverfill),
+        )
+    ),
+
+	GitHubIcon: (
+		fill: var(--color-navbar-icon-fill),
+		hoverFill: var(--color-navbar-icon-hoverfill),
+	),
+);

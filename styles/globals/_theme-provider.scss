@@ -1,0 +1,37 @@
+@use "sass:map";
+
+@mixin setTheme($config, $variable) {
+	// Warnings
+	@if not map.has-key($variable, 'color-font') {
+		@error "Missing color variable 'color-font'.";
+	}
+	@if not map.has-key($variable, 'color-anchor') {
+		@error "Missing color variable 'color-anchor'.";
+	}
+	@if not map.has-key($variable, 'color-background') {
+		@error "Missing color variable 'color-background'.";
+	}
+	@if not map.has-key($variable, 'color-navbar-icon-fill') {
+		@error "Missing color variable 'color-navbar-icon-fill'.";
+	}
+	@if not map.has-key($variable, 'color-navbar-icon-hoverfill') {
+		@error "Missing color variable 'color-navbar-icon-hoverfill'.";
+	}
+
+	// Setup
+	#theme-provider[theme="#{map.get($config, 'name')}"] {
+		--color-font: #{map.get($variable, 'color-font')};
+		--color-anchor: #{map.get($variable, 'color-anchor')};
+		--color-background: #{map.get($variable, 'color-background')};
+		--color-navbar-icon-fill: #{map.get($variable, 'color-navbar-icon-fill')};
+		--color-navbar-icon-hoverfill: #{map.get($variable, 'color-navbar-icon-hoverfill')};
+	}
+
+	#theme-provider {
+		background-color: var(--color-background);
+		min-height: 100vh;
+		transition: all 0.3s;
+	}
+}
+
+@import './theme-variables';

@@ -1,15 +1,20 @@
 // GLOBALS
-@import './globals/colors.scss';
-@import './globals/dom.scss';
-@import './globals/fonts.scss';
-@import './globals/presets.scss';
+@import './globals/colors';
+@import './globals/theme-provider';
+@import './globals/dom';
+@import './globals/fonts';
+@import './globals/presets';
+
+// THEMES
+@import './themes/light';
+@import './themes/dark';
 
 // LAYOUTS
-@import './layouts/default.scss';
+@import './layouts/default';
 
 // COMPONENTS
-@import './components/presentation.scss';
-@import './components/navbar.scss';
+@import './components/presentation';
+@import './components/navbar';
 
 // PAGES
-@import './pages/home.scss';
+@import './pages/home';

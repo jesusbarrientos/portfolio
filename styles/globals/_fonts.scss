@@ -74,7 +74,7 @@ html {
 @mixin h-sizes {
 	@each $key, $value in $h-sizes {
 		h#{$key} {
-			color: $color-5;
+			color: $color-font;
 			font-family: 'Castoro', serif;
 			font-size: map-get($value, 'size');
 			font-weight: map-get($value, 'weight');
@@ -90,14 +90,18 @@ span {
 	@extend %font-props;
 }
 
+p {
+	text-align: justify;
+}
+
 a {
 	@extend %font-props;
-	color: $color-3;
+	color: $color-anchor;
 	user-select: none;
 
 	&:hover,
 	&:active {
-		color: rgba($color-3, 0.3);
+		color: rgba($color-anchor, 0.3);
 	}
 }
 
@@ -106,7 +110,7 @@ a {
 	font-family: 'Biotif', sans-serif;
 	font-weight: $font-weight-normal;
 	font-style: normal;
-	color: $color-5;
+	color: $color-font;
 
 	b {
 		font-weight: $font-weight-bold;
