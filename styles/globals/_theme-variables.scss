@@ -21,21 +21,6 @@ $color-anchor: var(--color-anchor);
 $color-background: var(--color-background);
 
 // Components Colors
-
-$Navbar: (
-    ThemeIcon: (
-        InsidePath: (
-            fill: transparent,
-            hoverFill: transparent,
-        ),
-        OutsidePath: (
-            fill: var(--color-navbar-icon-fill),
-            hoverFill: var(--color-navbar-icon-hoverfill),
-        )
-    ),
-
-	GitHubIcon: (
-		fill: var(--color-navbar-icon-fill),
-		hoverFill: var(--color-navbar-icon-hoverfill),
-	),
-);
+$color-button: var(--color-button);
+$color-button-hover: var(--color-button-hover);
+$color-button-hover-shadow: var(--color-button-hover-shadow);

@@ -1,7 +1,7 @@
 import '../styles/styles.css'
 import { Provider } from 'react-redux'
 import store from './../redux/store'
-import ThemeProvider from '../components/themeProvider'
+import ThemeProvider from '../components/ThemeProvider'
 
 function App({ Component, pageProps }) {
     return (

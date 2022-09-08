@@ -3,7 +3,7 @@ import Navbar from './../components/navbar'
 
 export default function DefaultLayout({ children }) {
 	return (
-		<div className="pf-layout pf-layout-default">
+		<container className="pf-layout pf-layout-default">
 			<Head>
 				<title>Portfolio | Jesús Barrientos</title>
 				<meta name="description" content="Full-stack Web Developer" />
@@ -14,6 +14,6 @@ export default function DefaultLayout({ children }) {
 				<Navbar />
 				<section className="content">{children}</section>
 			</main>
-		</div>
+		</container>
 	)
 }

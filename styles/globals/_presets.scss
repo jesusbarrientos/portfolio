@@ -14,11 +14,12 @@
  * SIZES
  */
 
+$sizeFactor: 4px;
 $sizes: (
-	xs: 4px,
-	s: 8px,
-	m: 16px,
-	l: 24px,
+	xs: $sizeFactor * 1,
+	s: $sizeFactor * 2,
+	m: $sizeFactor * 3,
+	l: $sizeFactor * 4,
 );
 $positions: t, l, b, r;
 

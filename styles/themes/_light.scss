@@ -7,8 +7,9 @@ $variable: (
 	'color-font': $color-5,
 	'color-anchor': $color-3,
 	'color-background': $color-1,
-	'color-navbar-icon-fill': $color-5,
-	'color-navbar-icon-hoverfill': $color-4,
+	'color-button': $color-5,
+	'color-button-hover': $color-4,
+	'color-button-hover-shadow': $color-5,
 );
 
 @include setTheme($config, $variable);

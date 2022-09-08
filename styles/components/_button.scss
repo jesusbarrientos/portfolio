@@ -1,0 +1,35 @@
+.pf-button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: $sizeFactor * 1;
+    padding: ($sizeFactor * 1) ($sizeFactor * 2);
+
+    border: 0;
+    border-radius: 25px;
+    background-color: transparent;
+    color: $color-button;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    span {
+        padding-top: 3px;
+        color: inherit;
+    }
+
+    &:hover {
+        background-color: $color-button-hover-shadow;
+        color: $color-button-hover;
+
+        .pf-icon {
+            fill: $color-button-hover;
+        }
+    }
+    
+    .pf-icon {
+        width: 1.5em;
+		height: auto;
+        fill: $color-button;
+        transition: fill 0.3s;
+    }
+}

@@ -65,17 +65,15 @@ $h-sizes: (
 		text-transform: none,
 	),
 );
-$p-size: 16px;
+$p-size: 14px;
 
-html {
-	font-size: $p-size;
-}
+$headersFontFamily: 'Castoro', serif;
 
 @mixin h-sizes {
 	@each $key, $value in $h-sizes {
 		h#{$key} {
 			color: $color-font;
-			font-family: 'Castoro', serif;
+			font-family: $headersFontFamily;
 			font-size: map-get($value, 'size');
 			font-weight: map-get($value, 'weight');
 			text-transform: map-get($value, 'text-transform');
@@ -86,7 +84,8 @@ html {
 
 p,
 label,
-span {
+span,
+button {
 	@extend %font-props;
 }
 
@@ -105,9 +104,11 @@ a {
 	}
 }
 
+$fontFamily: 'Biotif', sans-serif;
+
 %font-props {
 	font-size: 1rem;
-	font-family: 'Biotif', sans-serif;
+	font-family: $fontFamily;
 	font-weight: $font-weight-normal;
 	font-style: normal;
 	color: $color-font;

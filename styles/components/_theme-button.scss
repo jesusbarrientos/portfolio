@@ -1,0 +1,31 @@
+.pf-theme-button {
+    &:hover {
+        .pf-icon {
+            .theme-icon_svg__inside {
+                fill: transparent;
+            }
+    
+            .theme-icon_svg__outside {
+                fill: $color-button-hover;
+            }
+        }
+    }
+
+    .pf-icon {
+        transition: none;
+
+        .theme-icon_svg__inside {
+            fill: transparent;
+        }
+
+        .theme-icon_svg__outside {
+            fill: $color-button;
+            transition: fill 0.3s;
+        }
+    }
+
+    .theme-word {
+        color: $color-anchor;
+        transition: color 0.3s;
+    }
+}
